@@ -1,14 +1,19 @@
 // complete this js code
 function Person(name, age) {
+	this.name = name;
+	this.age = age;
 	Person.prototype.greet = function(){
-		console.log(`Hello, my name is ${name}, I am ${age} years old.`);
+		document.write(`Hello, my name is ${name}, I am ${age} years old.`);
 	}
 }
 
 function Employee(name, age, jobTitle) {
+	this.name = name;
+	this.age = age;
+	this.jobTitle = jobTitle;
 	Employee.prototype.__proto__ = Person.prototype;
 	Employee.prototype.jobGreet = function(){
-		console.log(`Hello, my name is ${name}, I am ${age} years old, and my job title is ${jobTitle}.`);
+		document.write(`Hello, my name is ${name}, I am ${age} years old, and my job title is ${jobTitle}.`);
 	}
 }
 
